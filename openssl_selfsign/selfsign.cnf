@@ -1,0 +1,22 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+x509_extensions = v3_req
+distinguished_name = dn
+
+[dn]
+C = CO
+ST = ST
+L = L
+O = O
+OU = OU
+emailAddress = mail@www.example.com
+CN = www.example.com
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = *.www.example.com
+DNS.2 = www.example.com
