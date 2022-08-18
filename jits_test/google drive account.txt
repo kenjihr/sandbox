@@ -1,0 +1,10 @@
+https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=947318989803-6bn6qk8qdgf4n4g3pfee6491hc0brc4i.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&prompt=consent&access_type=offline&redirect_uri=http%3A%2F%2Flocalhost%3A12345
+
+https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=947318989803-6bn6qk8qdgf4n4g3pfee6491hc0brc4i.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/userinfo.email openid&prompt=consent&access_type=offline&redirect_uri=http://localhost:12345
+
+
+ここを見れば、返された code から Access Tokenを取得できそう
+https://poppingcarp.com/google-api_get_access_token/
+
+client secret
+gtDkCw7oR54acTIqay0eliAO
