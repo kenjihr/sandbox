@@ -3,21 +3,26 @@ services:
   server1:
     build:
       context: .
-      dockerfile: Dockerfile.server1
+      dockerfile: server1/Dockerfile
+    container_name: nginx_server1
     ports:
       - "8080:80"
     networks:
-      default:
+      my_net_v6:
         aliases:
-          - server1.example.com
+          - server1.example.jp
 
   server2:
     build:
       context: .
-      dockerfile: Dockerfile.server2
+      dockerfile: server2/Dockerfile
+    container_name: nginx_server2
     ports:
       - "8081:80"
     networks:
-      default:
+      my_net_v6:
         aliases:
-          - server2.example.com
+          - server2.example.jp
+networks:
+  my_net_v6:
+    external: true
