@@ -1,0 +1,21 @@
+version: '3'
+services:
+  server1:
+    build:
+      context: .
+      dockerfile: server1/Dockerfile
+    container_name: nginx_server1
+    networks:
+      default:
+        aliases:
+          - server1.example.jp
+
+  server2:
+    build:
+      context: .
+      dockerfile: server2/Dockerfile
+    container_name: nginx_server2
+    networks:
+      default:
+        aliases:
+          - server2.example.jp

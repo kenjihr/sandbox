@@ -1,0 +1,1 @@
+openssl req -extensions v3_req -new -newkey rsa:4096 -keyout server.key -nodes -subj='/C=JP/ST=Tokyo/L=Minato-ku/O=EXAMPLE Co.,Ltd/CN=*.example.jp' -x509 -days 3650 -out server.csr -addext 'subjectAltName = DNS:example.jp,DNS:*.example.jp'
