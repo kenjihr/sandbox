@@ -1,0 +1,15 @@
+version: '3'
+services:
+  apollo_server:
+    build:
+      context: ./apollo_server
+    ports:
+      - "4000:4000"
+    tty: true
+
+  apollo_client:
+    build:
+      context: ./apollo_client
+    ports:
+      - "3000:3000"
+    tty: true
