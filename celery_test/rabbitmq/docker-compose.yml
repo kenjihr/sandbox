@@ -1,0 +1,25 @@
+services:
+  celery_server:
+    build:
+      context: ./celery_server
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./celery_server:/opt/celery_server
+
+  rabbitmq_server:
+    image: rabbitmq:3.13
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+      - ./data/rabbitmq:/var/lib/rabbitmq
+
+  redis_server:
+    image: redis:7.4.0
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./data/redis:/data"
